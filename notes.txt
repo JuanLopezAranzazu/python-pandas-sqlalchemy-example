@@ -1,0 +1,11 @@
+Comandos para migraciones de la DB con Alembic
+
+Inicializar Alembic
+alembic init .
+alembic init migrations
+
+Crear migraciones (commit)
+alembic revision --autogenerate -m "mensaje"
+
+Aplicar migraciones
+alembic upgrade head
