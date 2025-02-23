@@ -1,10 +1,8 @@
-from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from config.global_config import global_config
 
-load_dotenv()
-
+# Url de la base de datos
 DATABASE_URL = f"postgresql://{global_config.DB_USER}:{global_config.DB_PASSWORD}@{global_config.DB_HOST}:{global_config.DB_PORT}/{global_config.DB_NAME}"
 
 # motor de base de datos
