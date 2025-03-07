@@ -95,3 +95,17 @@ def plot_experience_by_profession(db):
   # guardar el gráfico en un archivo
   plt.savefig(f"{graphs_dir}/experience_by_profession.png")
   plt.close()
+
+
+# crear gráficos
+def generate_graphs(db):
+  # crear directorio si no existe
+  if not os.path.exists(graphs_dir):
+    os.makedirs(graphs_dir)
+
+  # crear gráficas
+  plot_income_by_profession(db)
+  plot_customers_by_profession(db)
+  plot_experience_by_profession(db)
+
+  print("Gráficas generadas en la carpeta 'graphs'")

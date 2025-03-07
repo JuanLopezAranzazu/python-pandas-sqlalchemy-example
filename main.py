@@ -1,6 +1,6 @@
 from db.database import engine, Base, SessionLocal
 from utils.load_data import load_customer_data
-from utils.create_graphs import plot_income_by_profession, plot_customers_by_profession, plot_experience_by_profession
+from utils.create_graphs import generate_graphs
 
 def main():
   # crear las tablas en la base de datos
@@ -15,11 +15,8 @@ def main():
 
   # cargar los datos en la base de datos
   load_customer_data(db)
-
   # crear gráficos
-  plot_income_by_profession(db)
-  plot_customers_by_profession(db)
-  plot_experience_by_profession(db)
+  generate_graphs(db)
 
 if __name__ == "__main__":
   main()
